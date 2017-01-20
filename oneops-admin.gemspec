@@ -47,6 +47,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rake", '= 10.1.1'
   s.add_dependency "fog-aliyun", '= 0.1.0'
+  s.add_dependency "fog-digitalocean", '= 0.2.0'
   s.bindir       = 'bin'
   s.require_path = 'lib'
   s.files        = %w() + ["oneops-admin.gemspec"] + ["Gemfile"] + Dir.glob(".chef/**/*") + Dir.glob("lib/**/*") + ["target/inductor-#{Inductor::VERSION}.jar"] + Dir.glob('bin/**/*')

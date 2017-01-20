@@ -86,7 +86,12 @@ when /aliyun/
     :aliyun_accesskey_id => cloud[:key],
     :aliyun_accesskey_secret => cloud[:secret]
   })
-
+when /digitalocean/
+   require 'fog/digitalocean'
+   provider = Fog::Compute.new({
+     :provider => 'digitalocean',
+     :digitalocean_token => cloud[:key]
+  })
 when /azure/
   provider = 'azure'
 
